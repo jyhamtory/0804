@@ -1,0 +1,451 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*슬라이더*/
+#slider {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+}
+
+#slider>a>img {
+  display:block;
+  margin: 0 auto;
+  position: relative;
+}
+
+#slider>.textbox {
+  width: 500px;
+  height: 500px;
+  float: left;
+  position:absolute;
+  top:33%;
+  left:15%;
+}
+
+#slider>.textbox>.slider_title {
+  font-size: 60px;
+  color: white;
+  margin-top: 34px;
+  line-height: normal;
+}
+
+#slider>.textbox>.slider_subtitle {
+  font-size: 25px;
+  color: white;
+  margin-top: 70px;
+}
+
+
+/*section & exclusive*/
+section {
+  width: 1240px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 26px;
+  padding: 30px 0 20px 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+#exclusive {
+  width: 1240px;
+  height: 800px;
+}
+
+#exclusive>.title {
+  padding-top: 100px
+}
+
+#exclusive>.imgbox {
+  width: 380px;
+  height: 510px;
+  float: left;
+  margin: 0 0 0 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+#exclusive>.imgbox>a>img {
+  position: absolute;
+  left: -70px;
+  width: 520px;
+  height: 100%;
+}
+
+#exclusive>.textbox {
+  display: inline-block;
+  width: 380px;
+  height: 100px;
+  margin: 8px 0 0 430px;
+}
+
+#exclusive>.textbox>h3 {
+  font-size: 26px;
+  text-align: center;
+  font-weight: normal;
+  margin: 15px 0 0 0;
+}
+
+#exclusive>.textbox>p {
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 0 0 0;
+  font-weight: 300;
+}
+
+#exclusive>.buttonbox {
+  width: 80px;
+  height: 50px;
+  margin: 8px 0 0 580px;
+}
+
+.buttonbox>ul>.button>img {
+  width: 7px;
+  height: 7px;
+  float: left;
+  margin: 0 0 0 10px;
+}
+
+
+/*New Arrival*/
+#new_arrival {
+  width: 1240px;
+  height: 850px;
+}
+
+#new_arrival>.title {
+  padding-top: 80px
+}
+
+.category {
+  width: 100%;
+  height: 70px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.category>ul {
+  display: inline-block;
+}
+
+.category>ul>li {
+  float: left;
+  margin: 10px 20px 0 20px;
+}
+
+.category>ul>li>a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.category>ul>li>a:hover {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px
+}
+
+#new_arrival>.imgbox {
+  width: 290px;
+  height: 490px;
+  float: left;
+  margin: 0 0 0 16px;
+}
+
+#new_arrival>.imgbox>a>img {
+  width: 290px;
+  height: 380px;
+}
+
+.brand_name {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 8px 0 0 0;
+}
+
+.brand_name>a {
+  text-decoration: none;
+  color: black;
+}
+
+.brand_name>a:hover {
+  text-decoration: underline;
+}
+
+.product_name {
+  font-size: 13px;
+  margin: 5px 0 0 0;
+  line-height: normal;
+    font-weight: 300;
+}
+
+.product_name>a {
+  text-decoration: none;
+  color: black;
+}
+
+.product_name>a:hover {
+  text-decoration: underline;
+}
+
+.price {
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+  margin: 15px 0 0 0;
+}
+
+.sale {
+  font-size: 13px;
+  text-decoration: line-through;
+  color: lightgray;
+  margin: 15px 0 0 0;
+}
+
+.sale:before {
+  content: "sale";
+  color: tomato;
+  font-weight: bold;
+  margin: 0 7px 0 0;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.sale:after {
+  content: "250,200";
+  margin: 0 0 0 10px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.buttonbox {
+  width: 200px;
+  height: 50px;
+  float: left;
+  margin: 25px 0 0 570px;
+}
+
+/*event*/
+#event {
+  width: 1240px;
+  height: 330px;
+}
+
+#event>.imgbox_small {
+  width: 240px;
+  height: 110px;
+  float: left;
+  margin: 0 5px 0 3px;
+}
+
+#event>.imgbox_small>a>img {
+  height: 100%;
+  height: 100%;
+}
+
+#event>.imgbox_large {
+  width: 1240px;
+  height: 90px;
+  float: left;
+  margin: 60px 0 0 0;
+}
+
+#event>.imgbox_large>a>img {
+  width: 100%;
+  height: 100%;
+}
+
+#event>.buttonbox {
+  margin: 40px 0 0 557px;
+}
+
+/*Brand Focus*/
+#brand_focus {
+  width: 1240px;
+  height: 1200px;
+}
+
+#brand_focus>.title {
+  padding: 70px 0 30px 0;
+}
+
+#brand_focus>.imgbox_large {
+  width: 600px;
+  height: 600px;
+  float: left;
+  margin: 0 10px 0 10px;
+}
+
+#brand_focus>.imgbox_large>a>img {
+  width: 100%;
+  height: 100%;
+}
+
+#brand_focus>.imgbox_small {
+  width: 185px;
+  height: 340px;
+  float: left;
+  margin: 20px 10px 0 11.5px;
+}
+
+#brand_focus>.imgbox_small>a>img {
+  width: 185px;
+  height: 245px;
+}
+
+#brand_focus>.imgbox_small>.price {
+  font-size: 14px;
+}
+
+#brand_focus>.imgbox_small>.sale28:before {
+  content: "28%";
+  color: tomato;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 10px 0 0;
+}
+
+#brand_focus>.imgbox_small>.sale37:before {
+  content: "37%";
+  color: tomato;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 10px 0 0;
+}
+
+#brand_focus>.buttonbox {
+  margin: 30px 0 0 590px;
+}
+
+/*LF 공식 수입 브랜드*/
+#lf_brand {
+  width: 1240px;
+  height: 300px;
+}
+
+#lf_brand {
+  padding-top: 35px;
+}
+
+#lf_brand>.brand_imgbox {
+  width: 130px;
+  height: 100px;
+  margin: 20px 0 0 7px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+#lf_brand>.brand_imgbox>a>img {
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: -10px;
+}
+
+/*Style Finder*/
+#style_finder {
+  width: 1240px;
+  height: 550px;
+}
+
+#style_finder>.imgbox {
+  width: 295px;
+  height: 295px;
+  float: left;
+  margin: 13px 0 0 12px;
+}
+
+#style_finder>.imgbox>a>img {
+  width: 100%;
+  height: 100%;
+}
+
+#style_finder>.buttonbox {
+  margin: 39px 0 0 574px;
+}
+
+/*Best Pick*/
+#best_pick {
+  width: 1240px;
+  height: 1910px;
+}
+
+#best_pick>.category {
+  width: 100%;
+  height: 70px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#best_pick>.imgbox_large {
+  width: 285px;
+  height: 450px;
+  float: left;
+  margin: 0 0 20px 20px;
+}
+
+#best_pick>.imgbox_large>a>img {
+  width: 100%;
+  height: 350px;
+}
+
+#best_pick>.imgbox_small {
+  width: 183px;
+  height: 320px;
+  float: left;
+  margin: 0 0 0 20px;
+}
+
+#best_pick>.imgbox_small {
+  width: 183px;
+  height: 320px;
+  float: left;
+  margin: 0 0 20px 20px;
+}
+
+#best_pick>.imgbox_small>a>img {
+  width: 100%;
+  height: 220px;
+}
+
+#best_pick .brand_name{
+  font-size:13px;
+}
+
+#best_pick>.imgbox_small>.product_name{
+  font-weight: 300;
+}
+
+.sale20:before {
+  content: "20%";
+  color: tomato;
+  font-weight: bold;
+  margin: 0 7px 0 0;
+}
+
+.sale32:before {
+  content: "32%";
+  color: tomato;
+  font-weight: bold;
+  margin: 0 7px 0 0;
+}
+
+.sale37:before {
+  content: "37%";
+  color: tomato;
+  font-weight: bold;
+  margin: 0 7px 0 0;
+}
