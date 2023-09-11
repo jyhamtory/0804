@@ -10,8 +10,38 @@
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/common.css" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
-
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
   <script src="https://kit.fontawesome.com/db0e422e76.js" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+      // brand focus 파트 json 사용
+      $.ajax({
+        url: "json/brandfocus.json",
+        dataType: "json",
+        success: function(data){
+          if(data.length > 0){
+            for(var i in data){
+              var src = data[i].src;
+              var brand_name = data[i].brand_name;
+              var product_name = data[i].product_name;
+              var price = data[i].price;
+              $("#brand_focus .imgbox_small").eq(i).append("<a href='#'><img src = '" + src + "' alt = 'brand_focus'></a>");
+              $("#brand_focus .imgbox_small").eq(i).append("<h3 class='brand_name'><a href='#'>" + brand_name + "</a></h3>");
+              $("#brand_focus .imgbox_small").eq(i).append("<p class='product_name'><a href='#'>" + product_name + "</a></p>");
+              $("#brand_focus .imgbox_small").eq(i).append("<p class='price sale37'>" + price + "</p>");
+            }
+          }
+        }
+      })
+
+      // 슬라이드
+
+      $("")
+
+      setInterval(slide, 3000);
+      
+    })
+  </script>
 
 </head>
 
@@ -84,7 +114,11 @@
 
   <!--slider-->
   <div id="slider">
-    <a href="sub.html" target="_self"><img src="img/slider.jpg" alt="slider"></a>
+    <ul id="slide">
+      <li><img src="img/slider2.jpg" alt="slider"></li>
+      <li><img src="img/slider.jpg" alt="slider"></li>
+      <li><img src="img/slider3.jpg" alt="slider"></li>
+    </ul>
     <div class="textbox">
       <p class="slider_subtitle">Hazzys Laddies</p>
       <p class="slider_title">더 가볍게<br>만나는 여름</p>
@@ -214,40 +248,16 @@
         <a href="#"><img src="img/product/brand_focus_large2.jpg" alt="brand_focus_large2"></a>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/brand_focus_1.jpg" alt="brand_focus_img1"></a>
-        <h3 class="brand_name"><a href="#">BENSIMON</a></h3>
-        <p class="product_name"><a href="#">[벤시몽] TENNIS WOMAN LA...</a></p>
-        <p class="price sale37">37,170</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/brand_focus_2.jpg" alt="brand_focus_img2"></a>
-        <h3 class="brand_name"><a href="#">BENSIMON</a></h3>
-        <p class="product_name"><a href="#">[벤시몽] TENNIS WOMAN LA...</a></p>
-        <p class="price sale37">37,170</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/brand_focus_3.jpg" alt="brand_focus_img3"></a>
-        <h3 class="brand_name"><a href="#">BENSIMON</a></h3>
-        <p class="product_name"><a href="#">[벤시몽] TENNIS WOMAN LA...</a></p>
-        <p class="price sale37">37,170</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/brand_focus_4.jpg" alt="brand_focus_img4"></a>
-        <h3 class="brand_name"><a href="#">TILLDIE</a></h3>
-        <p class="product_name"><a href="#">[5차] Strap point half sleeve...</a></p>
-        <p class="price sale28">51,055</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/brand_focus_5.jpg" alt="brand_focus_img5"></a>
-        <h3 class="brand_name"><a href="#">TILLDIE</a></h3>
-        <p class="product_name"><a href="#">[5차] Denim button point half...</a></p>
-        <p class="price sale28">72,110</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/brand_focus_6.jpg" alt="brand_focus_img6"></a>
-        <h3 class="brand_name"><a href="#">TILLDIE</a></h3>
-        <p class="product_name"><a href="#">[8차] Cotton stripe T-shirt_Green</a></p>
-        <p class="price sale28">24,990</p>
       </div>
       <div class="buttonbox">
         <ul>
@@ -343,7 +353,7 @@
       <div class="imgbox_large">
         <a href="#"><img src="img/product/best_pick_large2.jpg" alt="best_pick_large2"></a>
         <h3 class="brand_name"><a href="#">jsny</a></h3>
-        <p class="product_name"><a href="#">[23SS] Minimal Sleveless Dress [Cream</a></p>
+        <p class="product_name"><a href="#">[23SS] Minimal Sleveless Dress [Cream]</a></p>
         <p class="price">199,000</p>
       </div>
       <div class="imgbox_large">

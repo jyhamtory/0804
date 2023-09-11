@@ -7,14 +7,30 @@ body {
 
 /*슬라이더*/
 #slider {
-  width: 100%;
+  width: 1980px;
   height: 700px;
   margin: 0 auto;
+  overflow:hidden;
 }
 
-#slider>a>img {
-  display:block;
+#slide{
+  width:4800px;
   margin: 0 auto;
+  position:relative;
+  right:1450px;
+}
+
+#slide li {
+  width:1600px;
+  height:100%;
+  float:left;
+}
+
+#slider img {
+  width:100%;
+  height:100%;
+  display:block;
+
   position: relative;
 }
 
