@@ -1,4 +1,5 @@
 $(function () {
+
   // 네비게이션 All menu
   $("#all_menu").mouseover(function () {
     $(this).find(".sub").stop().show();
@@ -24,7 +25,7 @@ $(function () {
     $(".sub_large li").css("background-color", "#fff");
   })
 
-  // 네비게이션 브랜드 - 아울렛
+  // 네비게이션 아울렛
   $(".menu_icon").mouseover(function () {
     $(this).find(".sub").stop().show();
     $(".sub li").mouseover(function () {

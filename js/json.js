@@ -57,7 +57,7 @@ $(function () {
             $("#best_pick .imgbox_large").eq(i).append("<a href='#'><img src = '" + src + "' alt='new_arrival_img1'></a>");
             $("#best_pick .imgbox_large").eq(i).append("<h3 class='brand_name'><a href='#'>" + brand_name + "</a></h3>");
             $("#best_pick .imgbox_large").eq(i).append("<p class='product_name '><a href='#'>" + product_name + "</a></p>");
-            if(sale_key.indexOf("tildie") > -1){
+            if(sale_key.indexOf("tilldie") > -1){
               $("#best_pick .imgbox_large").eq(i).append("<p class='price sale20'>" + price + "</p>");
             }else{
               $("#best_pick .imgbox_large").eq(i).append("<p class='price'>" + price + "</p>");
