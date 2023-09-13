@@ -12,36 +12,9 @@
   <link href="css/index.css" rel="stylesheet">
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
   <script src="https://kit.fontawesome.com/db0e422e76.js" crossorigin="anonymous"></script>
-  <script>
-    $(function(){
-      // brand focus 파트 json 사용
-      $.ajax({
-        url: "json/brandfocus.json",
-        dataType: "json",
-        success: function(data){
-          if(data.length > 0){
-            for(var i in data){
-              var src = data[i].src;
-              var brand_name = data[i].brand_name;
-              var product_name = data[i].product_name;
-              var price = data[i].price;
-              $("#brand_focus .imgbox_small").eq(i).append("<a href='#'><img src = '" + src + "' alt = 'brand_focus'></a>");
-              $("#brand_focus .imgbox_small").eq(i).append("<h3 class='brand_name'><a href='#'>" + brand_name + "</a></h3>");
-              $("#brand_focus .imgbox_small").eq(i).append("<p class='product_name'><a href='#'>" + product_name + "</a></p>");
-              $("#brand_focus .imgbox_small").eq(i).append("<p class='price sale37'>" + price + "</p>");
-            }
-          }
-        }
-      })
-
-      // 슬라이드
-
-      $("")
-
-      setInterval(slide, 3000);
-      
-    })
-  </script>
+  <script src="js/nav.js"></script>
+  <script src="js/json.js"></script>
+  <script src="js/slide.js"></script>
 
 </head>
 
@@ -83,12 +56,78 @@
         <div id="all_menu">
           <ul class="all">
             <li><a href="sub.html" target="_self"><img src="img/icon/hamburger_menu_icon.png" alt="all"></a></li>
+            <ul class="sub">
+              <li><a href="#">여성의류</a></li>
+              <li><a href="#">남성의류</a></li>
+              <li><a href="#">여성가방/잡화</a></li>
+              <li><a href="#">남성가방/잡화</a></li>
+              <li><a href="#">여성슈즈</a></li>
+              <li><a href="#">남성슈즈</a></li>
+              <li><a href="#">골프</a></li>
+              <li><a href="#">스포츠/레져</a></li>
+              <li><a href="#">명품</a></li>
+              <li><a href="#">중고명품</a></li>
+              <li><a href="#">시계/쥬얼리</a></li>
+              <li><a href="#">리빙</a></li>
+              <li><a href="#">뷰티</a></li>
+              <li><a href="#">키즈</a></li>
+              <li><a href="#">여행</a></li>
+            </ul>
           </ul>
         </div>
         <div id="nav_menu">
           <ul>
             <li class="menu_icon brand">
               <a href="sub.html" target="_self">브랜드<img src="img/icon/down_icon.png" alt="down"></a>
+              <ul class="sub_large">
+                <li><a href="#">가스트로박</a></li>
+                <li><a href="#">골든구스</a></li>
+                <li><a href="#">구찌</a></li>
+                <li><a href="#">까르뱅</a></li>
+                <li><a href="#">나이키</a></li>
+                <li><a href="#">넘버21</a></li>
+                <li><a href="#">닥스</a></li>
+                <li><a href="#">리복</a></li>
+                <li><a href="#">듀얼릿</a></li>
+                <li><a href="#">라움</a></li>
+                <li><a href="#">라움 보야지</a></li>
+                <li><a href="#">레오나드</a></li>
+                <li><a href="#">루이비통</a></li>
+                <li><a href="#">마에스트로</a></li>
+                <li><a href="#">몽블랑</a></li>
+                <li><a href="#">몽클레어</a></li>
+                <li><a href="#">몽클레어</a></li>
+                <li><a href="#">바네사브루노</a></li>
+                <li><a href="#">바쉬</a></li>
+                <li><a href="#">발렌시아가</a></li>
+                <li><a href="#">버버리</a></li>
+                <li><a href="#">버켄스탁</a></li>
+                <li><a href="#">보테가 베네타</a></li>
+                <li><a href="#">봉통</a></li>
+                <li><a href="#">불리</a></li>
+                <li><a href="#">블랙야크</a></li>
+                <li><a href="#">빈스</a></li>
+                <li><a href="#">생로랑</a></li>
+                <li><a href="#">설화수</a></li>
+                <li><a href="#">쉬즈미스</a></li>
+                <li><a href="#">스텔라매카트니</a></li>
+                <li><a href="#">아디다스</a></li>
+                <li><a href="#">아떼뷰티</a></li>
+                <li><a href="#">아틀리에먼로</a></li>
+                <li><a href="#">알레그리</a></li>
+                <li><a href="#">앳코너</a></li>
+                <li><a href="#">엠세스지엠</a></li>
+                <li><a href="#">예작</a></li>
+                <li><a href="#">질 바이 질스튜어트</a></li>
+                <li><a href="#">질스튜어트 뉴욕</a></li>
+                <li><a href="#">질스튜어트스포츠</a></li>
+                <li><a href="#">챔피온</a></li>
+                <li><a href="#">탐스</a></li>
+                <li><a href="#">티엔지티</a></li>
+                <li><a href="#">판도라</a></li>
+                <li><a href="#">프라다</a></li>
+                <li><a href="#">헤지스</a></li>
+              </ul>
             </li>
             <li><a href="sub.html" target="_self">여성</a></li>
             <li><a href="sub.html" target="_self">남성</a></li>
@@ -97,7 +136,25 @@
             <li><a href="sub.html" target="_self">골프/스포츠</a></li>
             <li><a href="sub.html" target="_self">비건뷰티</a></li>
             <li><a href="sub.html" target="_self">리빙</a></li>
-            <li class="menu_icon"><a href="sub.html" target="_self">아울렛<img src="img/icon/down_icon.png" alt="down"></a></li>
+            <li class="menu_icon"><a href="sub.html" target="_self">아울렛<img src="img/icon/down_icon.png" alt="down"></a>
+              <ul class="sub outlet">
+                <li><a href="#">여성의류</a></li>
+                <li><a href="#">남성의류</a></li>
+                <li><a href="#">여성가방/잡화</a></li>
+                <li><a href="#">남성가방/잡화</a></li>
+                <li><a href="#">여성슈즈</a></li>
+                <li><a href="#">남성슈즈</a></li>
+                <li><a href="#">골프</a></li>
+                <li><a href="#">스포츠/레져</a></li>
+                <li><a href="#">명품</a></li>
+                <li><a href="#">중고명품</a></li>
+                <li><a href="#">시계/쥬얼리</a></li>
+                <li><a href="#">리빙</a></li>
+                <li><a href="#">뷰티</a></li>
+                <li><a href="#">키즈</a></li>
+                <li><a href="#">여행</a></li>
+              </ul>
+            </li>
             <li><a href="sub.html" target="_self">기획전/혜택</a></li>
           </ul>
         </div>
@@ -115,15 +172,11 @@
   <!--slider-->
   <div id="slider">
     <ul id="slide">
-      <li><img src="img/slider2.jpg" alt="slider"></li>
-      <li><img src="img/slider.jpg" alt="slider"></li>
-      <li><img src="img/slider3.jpg" alt="slider"></li>
+      <li><a href="#"><img src="img/slider.jpg" alt="slider"></a></li>
+      <li><a href="#"><img src="img/slider2.jpg" alt="slider"></a></li>
+      <li><a href="#"><img src="img/slider3.jpg" alt="slider"></a></li>
+      <li><a href="#"><img src="img/slider4.jpg" alt="slider"></a></li>
     </ul>
-    <div class="textbox">
-      <p class="slider_subtitle">Hazzys Laddies</p>
-      <p class="slider_title">더 가볍게<br>만나는 여름</p>
-      <p class="slider_subtitle">22SS CLEARANCE</p>
-    </div>
   </div>
 
   <!--section-->
@@ -171,28 +224,12 @@
         </ul>
       </div>
       <div class="imgbox">
-        <a href="#"><img src="img/product/new_arrival_1.jpg" alt="new_arrival_img1"></a>
-        <h3 class="brand_name"><a href="#">RUGGEDHOUSE</a></h3>
-        <p class="product_name"><a href="#">러기드하우스: 볼드트윈 오버핏 반팔티 카키</a></p>
-        <p class="price">39,000</p>
       </div>
       <div class="imgbox">
-        <a href="#"><img src="img/product/new_arrival_2.jpg" alt="new_arrival_img2"></a>
-        <h3 class="brand_name"><a href="#">SUITSUIT</a></h3>
-        <p class="product_name"><a href="#">세븐티스 토프 PE 20인치 기내용 캐리어 TR-72012</a></p>
-        <p class="sale">270,000</p>
       </div>
       <div class="imgbox">
-        <a href="#"><img src="img/product/new_arrival_3.jpg" alt="new_arrival_img3"></a>
-        <h3 class="brand_name"><a href="#">RUGGEDHOUSE</a></h3>
-        <p class="product_name"><a href="#">러기드하우스: 편안하게 라이프 16수 포켓 오버핏 반팔티 네이비</a></p>
-        <p class="price">22,000</p>
       </div>
       <div class="imgbox">
-        <a href="#"><img src="img/product/new_arrival_4.jpg" alt="new_arrival_img4"></a>
-        <h3 class="brand_name"><a href="#">CHARMZONE</a></h3>
-        <p class="product_name"><a href="#">인진쑥 세럼 디 오리지널 50ml 1+1</a></p>
-        <p class="price">60,000</p>
       </div>
       <div class="buttonbox">
         <ul>
@@ -345,124 +382,44 @@
         </ul>
       </div>
       <div class="imgbox_large">
-        <a href="#"><img src="img/product/best_pick_large1.jpg" alt="best_pick_large1"></a>
-        <h3 class="brand_name"><a href="#">TILLDIE</a></h3>
-        <p class="product_name"><a href="#">[12차]Cotton stripe T-shirt[2color]</a></p>
-        <p class="price sale20">27,930</p>
       </div>
       <div class="imgbox_large">
-        <a href="#"><img src="img/product/best_pick_large2.jpg" alt="best_pick_large2"></a>
-        <h3 class="brand_name"><a href="#">jsny</a></h3>
-        <p class="product_name"><a href="#">[23SS] Minimal Sleveless Dress [Cream]</a></p>
-        <p class="price">199,000</p>
       </div>
       <div class="imgbox_large">
-        <a href="#"><img src="img/product/best_pick_large3.jpg" alt="best_pick_large3"></a>
-        <h3 class="brand_name"><a href="#">HAZZYS GOLF</a></h3>
-        <p class="product_name"><a href="#">[23SS] [H-SIGNITURE]네이비 ICONIC 반팔 카라티</a></p>
-        <p class="price sale10">138,000</p>
       </div>
       <div class="imgbox_large">
-        <a href="#"><img src="img/product/best_pick_large4.jpg" alt="best_pick_large4"></a>
-        <h3 class="brand_name"><a href="#">DAKS LADIES</a></h3>
-        <p class="product_name"><a href="#">[23SS] [D-PLEATS] 블랙 스트랩 5부소매 플리츠 원피스</a></p>
-        <p class="price">355,000</p>
       </div>
       <div class="imgbox_large">
-        <a href="#"><img src="img/product/best_pick_large5.jpg" alt="best_pick_large5"></a>
-        <h3 class="brand_name"><a href="#">A.T.CORNER</a></h3>
-        <p class="product_name"><a href="#">[반바지BEST/레인부츠코디] 턱 데님 숏팬츠 블루</a></p>
-        <p class="price">95,000</p>
       </div>
       <div class="imgbox_large">
-        <a href="#"><img src="img/product/best_pick_large6.jpg" alt="best_pick_large6"></a>
-        <h3 class="brand_name"><a href="#">LOOKAST</a></h3>
-        <p class="product_name"><a href="#">아이보리 베이직 스트라이프 티셔츠 / IVORY BASIC STRIPE T-SHIRT</a></p>
-        <p class="price">58,000</p>
       </div>
       <div class="imgbox_large">
-        <a href="#"><img src="img/product/best_pick_large7.jpg" alt="best_pick_large7"></a>
-        <h3 class="brand_name"><a href="#">TILLIDIE</a></h3>
-        <p class="product_name"><a href="#">[6차]Collarless pearl button summer tweed jacket_White</a></p>
-        <p class="price sale20">140,450</p>
       </div>
       <div class="imgbox_large">
-        <a href="#"><img src="img/product/best_pick_large8.jpg" alt="best_pick_large8"></a>
-        <h3 class="brand_name"><a href="#">OUTDOOR PRODUCTS</a></h3>
-        <p class="product_name"><a href="#">3팩 티셔츠 3PACK T-SHIRT</a></p>
-        <p class="price sale32">40,730</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick1.jpg" alt="best_pick_img1"></a>
-        <h3 class="brand_name"><a href="#">DOUBLE FLAG</a></h3>
-        <p class="product_name"><a href="#">[23SS] [완판리오더][COOL]블랙 남성 로고 포인트 쿨 썸...</a></p>
-        <p class="price">179,900</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick2.jpg" alt="best_pick_img2"></a>
-        <h3 class="brand_name"><a href="#">HALBKREIS LAYOUT</a></h3>
-          <p class="product_name"><a href="#">[8/1 예약발송]P-058 캐럿 린넨 와이드 팬츠_BG</a></p>
-          <p class="price">44,000</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick3.jpg" alt="best_pick_img3"></a>
-        <h3 class="brand_name"><a href="#">FABRIK POTTERY</a></h3>
-        <p class="product_name"><a href="#">패브릭포터리 컬러블록 라인 런치플레이트 - Yellow</a></p>
-        <p class="price">108,000</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick4.jpg" alt="best_pick_img4"></a>
-        <h3 class="brand_name"><a href="#">A.T.CORNER</a></h3>
-        <p class="product_name"><a href="#">[셔츠BEST] 스티치 리넨 오픈카라 셔츠 네이비</a></p>
-        <p class="price">99,000</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick5.jpg" alt="best_pick_img5"></a>
-        <h3 class="brand_name"><a href="#">STANDIAL</a></h3>
-        <p class="product_name"><a href="#">[23SS] [2차리오더/LF몰단독]Summer Color Line...</a></p>
-        <p class="price">109,000</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick6.jpg" alt="best_pick_img6"></a>
-        <h3 class="brand_name"><a href="#">DAKS LADIES</a></h3>
-        <p class="product_name"><a href="#">[23SS] 밝은 블루 솔리드 면혼방 여름 반팔가디건</a></p>
-        <p class="price sale20">202,760</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick7.jpg" alt="best_pick_img7"></a>
-        <h3 class="brand_name"><a href="#">JILLSTUART NEWYORK ACC</a></h3>
-        <p class="product_name"><a href="#">[23FW] [송이송이착장][코코체인] 블랙 골드 장식 드로...</a></p>
-        <p class="price sale32">291,040</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick8.jpg" alt="best_pick_img8"></a>
-        <h3 class="brand_name"><a href="#">TIPICOSI</a></h3>
-        <p class="product_name"><a href="#">[23FW] [HANI] FLASH 숄더백 블랙</a></p>
-        <p class="price">58,000</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick9.jpg" alt="best_pick_img9"></a>
-        <h3 class="brand_name"><a href="#">JOSEPH&STACEY</a></h3>
-        <p class="product_name"><a href="#">Lucky Pleats Canvas Coated Baby Bag (4color)</a></p>
-        <p class="price sale20">159,800</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick10.jpg" alt="best_pick_img10"></a>
-        <h3 class="brand_name"><a href="#">COLE HAAN</a></h3>
-        <p class="product_name"><a href="#">[GRANDPRØ Topspin] 미색 남성 스니커즈 [Width:W]</a></p>
-        <p class="price sale37">150,570</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick11.jpg" alt="best_pick_img11"></a>
-        <h3 class="brand_name"><a href="#">JILLSTUART ACC MEN</a></h3>
-        <p class="product_name"><a href="#">[23FW] [BL:IRON] 블리언 크로스백 스몰 사이즈</a></p>
-        <p class="price">220,000</p>
       </div>
       <div class="imgbox_small">
-        <a href="#"><img src="img/product/best_pick12.jpg" alt="best_pick_img12"></a>
-        <h3 class="brand_name"><a href="#">ORGANIA</a></h3>
-        <p class="product_name"><a href="#">오가니아 보타닉 스칼프 두피샴푸 1000ml</a></p>
-        <p class="price">35,900</p>
       </div>
     </div>
   </section>
