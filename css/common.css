@@ -198,6 +198,73 @@ nav>#header_bottom {
   border-bottom: none;
 }
 
+/*sub nav*/
+.sub{
+  width:180px;
+  height:auto;
+  position: absolute; 
+  margin-top:14px;
+  z-index: 30;
+  background-color:#fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  display: none;
+}
+
+.sub li {
+  width:100%;
+  height:40px;
+  line-height: 40px;
+  color:#000;
+  text-decoration: none;
+  display: block;
+}
+
+.sub a{
+  font-size: 14px;
+  color:#000;
+  text-decoration: none;
+  display: block;
+  margin-left: 15px;
+}
+
+/*sub large (브랜드)*/
+.sub_large{
+  width:58%;
+  height:520px;
+  position: absolute; 
+  margin-top:19px;
+  z-index: 30;
+  background-color:#fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  padding-top: 20px;
+}
+
+.sub_large li {
+  width:25%;
+  height:40px;
+  line-height: 40px;
+  color:#000;
+  text-decoration: none;
+  display: block;
+}
+
+.sub_large a{
+  font-size: 14px;
+  color:#000;
+  text-decoration: none;
+  display: block;
+  margin-left: 15px;
+}
+
+/*sub (아울렛)*/
+.outlet{
+  margin-top:19.5px;
+
+}
 #recent {
   width: 145px;
   height: 52px;
